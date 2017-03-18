@@ -1,0 +1,16 @@
+{
+  "name": "bubblebot",
+  "version": "1.0.0",
+  "description": "A messenger bot to help you keep up to date with the latest news and stay informed with all sides of the conversation",
+  "main": "index.js",
+  "scripts": {
+    "test": "hello world!!"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2",
+    "request": "^2.81.0"
+  }
+}
