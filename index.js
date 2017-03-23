@@ -20,10 +20,8 @@ app.get('/', function (req, res) {
 
 // for Facebook verification
 app.get('/webhook/', function (req, res) {
-	if (req.query['hub.mode'] === 'subscribe' &&
-			req.query['hub.verify_token'] === 'bubblebot_verify_token') {
-				console.log("Validating webhook");
-		 res.status(200).send(req.query['hub.challenge']);
+	if (req.query['hub.verify_token'] === 'bubblebot_verify_token') {
+		 res.send(req.query['hub.challenge']);
 	}
 	res.send('Error, wrong token')
 })
