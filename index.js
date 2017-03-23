@@ -14,9 +14,9 @@ app.use(bodyParser.urlencoded({extended: false}))
 app.use(bodyParser.json())
 
 // Index route
-app.get('/', function (req, res) {
-	res.send('Hey its bubblebot')
-})
+// app.get('/', function (req, res) {
+// 	res.send('Hey its bubblebot')
+// })
 
 // for Facebook verification
 app.get('/webhook/', function (req, res) {
