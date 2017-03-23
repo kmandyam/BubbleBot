@@ -13,17 +13,17 @@ app.use(bodyParser.urlencoded({extended: false}))
 // Process application/json
 app.use(bodyParser.json())
 
-// for Facebook verification
-app.get('/webhook/', function (req, res) {
-	if (req.query['hub.verify_token'] === 'tokentoken') {
-		 res.send(req.query['hub.challenge']);
-	}
-	res.send('Error, wrong token')
-})
-
 // Index route
 app.get('/', function (req, res) {
 	res.send('Hey its bubblebot')
+})
+
+// for Facebook verification
+app.get('/webhook/', function (req, res) {
+	if (req.query['hub.verify_token'] === 'bubblebot_verify_token') {
+		 res.send(req.query['hub.challenge']);
+	}
+	res.send('Error, wrong token')
 })
 
 // Spin up the server
