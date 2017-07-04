@@ -1,2 +1,0 @@
-Verify Token: bubblebot_verify_token
-Callback URL: https://safe-brushlands-90855.herokuapp.com/
